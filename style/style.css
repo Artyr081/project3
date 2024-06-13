@@ -109,6 +109,11 @@ button {
     .brands-button {
         border: none;
         background-color: #F8F8F8;
+        transition-duration: 200ms;
+    }
+
+    .brands-button:hover {
+        transform: scale(1.1);
     }
 
     .brands-button__text {
@@ -123,7 +128,7 @@ button {
 
     .brands-button__text::before {
         content: "";
-        background-image: url(/images/expand.svg);
+        background-image: url(../images/expand.svg);
         width: 24px;
         height: 24px;
         margin-right: 10px;    
@@ -131,7 +136,7 @@ button {
 
     .brands-button__text_open::before {
         content: "";
-        background-image: url(/images/expand.svg);
+        background-image: url(../images/expand.svg);
         width: 24px;
         height: 24px;
         margin-right: 10px; 
@@ -147,7 +152,7 @@ button {
     }
 
     .brands-button__text {
-        padding-left: 24px;
+        padding-left: 24px; 
     }
 
     .brands-button {
