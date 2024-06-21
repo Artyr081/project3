@@ -1,30 +1,28 @@
-var swiper = new Swiper('.swiper', {
-        
-  loop: true,
-  slidesPerView: 'auto',
-  spaceBetween: 16,
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-  
-});
-
 function checkScreenWidth() {
     if (window.innerWidth > 767) {
         swiper.destroy();
     } else {
-      swiper();
+      var swiper = new Swiper('.swiper', {
+        
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+      
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+        
+      });
     }
 }
 window.addEventListener('resize', checkScreenWidth);
