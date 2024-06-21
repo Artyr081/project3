@@ -9,7 +9,7 @@ body {
     background-color: #F8F8F8;
 }
 
-button {
+.btn {
     padding: 0;
     border: none;
     background-color: inherit;
@@ -53,9 +53,14 @@ button {
 
 .swiper {
     width: auto; 
-    height: 100px;
+    height: 108px;
     display: flex; 
 } 
+
+.swiper-wrapper {
+    margin: 0;
+    padding: 0;
+}
 
 .swiper-pagination {
     display: flex;
@@ -71,6 +76,7 @@ button {
     width: 13px;
     height: 13px;
     background-color: #B5B6BC;
+    top: 77px;
 }
 
 .brands-button {

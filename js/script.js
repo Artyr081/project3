@@ -7,7 +7,6 @@ var swiper = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-    
   },
 
   navigation: {
@@ -17,34 +16,15 @@ var swiper = new Swiper('.swiper', {
 
   scrollbar: {
     el: '.swiper-scrollbar',
-  }, 
+  },
+  
 });
 
 function checkScreenWidth() {
     if (window.innerWidth > 767) {
         swiper.destroy();
     } else {
-      swiper = new Swiper('.swiper', {
-        
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 16,
-      
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-          
-        },
-      
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-      });
+      swiper();
     }
 }
 window.addEventListener('resize', checkScreenWidth);
@@ -61,13 +41,14 @@ span.textContent = spanText;
 button.addEventListener('click', function() {
   if (spanText === 'Показать все') {
       spanText = 'Скрыть';
-      
-      span.classList.add('brands-button__text_open');
+  
+      span.classList.toggle('brands-button__text_open');
       buttonBrend.classList.add('swiper_open');
   } else {
       spanText = 'Показать все';
-      buttonBrend.classList.remove('swiper_open')
-      span.classList.remove('brands-button__text_open');
+
+      buttonBrend.classList.remove('swiper_open');
+      span.classList.toggle('brands-button__text_open');
 };
 
   span.textContent = spanText;
