@@ -1,29 +1,31 @@
+var swiperConfig = {
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+    
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+    
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+    
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+}
+
+var swiper = new Swiper('.swiper', swiperConfig);
+
 function checkScreenWidth() {
-    if (window.innerWidth > 767) {
-        swiper.destroy();
-    } else {
-      var swiper = new Swiper('.swiper', {
-        
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 16,
-      
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-        
-      });
-    }
+  if (window.innerWidth > 767) {
+    swiper.destroy();
+  } else {
+    swiper = new Swiper('.swiper', swiperConfig);
+  }
 }
 window.addEventListener('resize', checkScreenWidth);
 checkScreenWidth();
